@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "750561813746",
+    "project_id": "dotktu-c383d",
+    "storage_bucket": "dotktu-c383d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:750561813746:android:eccab48e6d95f7fd27dc6b",
+        "android_client_info": {
+          "package_name": "com.boby.todoey"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "750561813746-29dbcs4ecm8dopd6j98nj8ld5cjmd8nn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsnS3tJYTDjeo_fIUdXumO1a1zwAUo_mY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "750561813746-29dbcs4ecm8dopd6j98nj8ld5cjmd8nn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
