@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:todoey/EasyJsonParse/JsonParseDemo.dart';
+import 'package:todoey/screens/chat_screen.dart';
 import 'package:todoey/screens/tasks_screen.dart';
 
 
@@ -83,6 +84,19 @@ class Home extends StatelessWidget {
                       ));
                     },
                     child: Text("notifications.Ktu",
+                      style: TextStyle(
+                          color: Colors.white
+                      ),),
+                  ),
+                  Divider(height: 10.0,),
+                  FlatButton(
+                    color: Colors.black,
+                    onPressed: (){
+                      Navigator.push(context, new MaterialPageRoute(
+                          builder: (context)=>ChatScreen()
+                      ));
+                    },
+                    child: Text("ChitChat.Ktu",
                       style: TextStyle(
                           color: Colors.white
                       ),),

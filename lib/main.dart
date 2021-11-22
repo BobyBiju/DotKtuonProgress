@@ -1,4 +1,4 @@
-//@dart=2.9
+
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +14,7 @@ import 'package:todoey/MyScreens/home_page.dart';
 import 'package:todoey/screens/welcome_screen.dart';
 import 'package:todoey/screens/registration_screen.dart';
 import 'package:todoey/screens/login_screen.dart';
+import 'package:todoey/screens/chat_screen.dart';
 
 FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
     FlutterLocalNotificationsPlugin();
@@ -21,10 +22,9 @@ FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
 Future<void> main() async {
 
 
-
-
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+
   var initializationSettingsAndroid = AndroidInitializationSettings('app_icon');
   var initializationSettingsIOS = IOSInitializationSettings();
   var initializationSettings = InitializationSettings(
@@ -46,6 +46,7 @@ class MyApp extends StatelessWidget {
       title: 'ToDoey',
       initialRoute: WelcomeScreen.id,
       routes: {
+        ChatScreen.id: (context) =>ChatScreen(),
         RegistrationScreen.id: (context) =>RegistrationScreen(),
         LoginScreen.id: (context) =>LoginScreen(),
         WelcomeScreen.id: (context) =>WelcomeScreen(),
