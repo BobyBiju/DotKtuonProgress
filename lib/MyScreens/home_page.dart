@@ -25,12 +25,7 @@ class Home extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                CircleAvatar(
-                  child: Icon(Icons.list,
-                    color: Colors.black,
-                    size: 30.0,),
-                  backgroundColor: Colors.white,
-                  radius: 30.0,),
+
                 SizedBox(height: 10.0,),
                 Text(".Ktu",
                   style: TextStyle(
@@ -39,12 +34,7 @@ class Home extends StatelessWidget {
                     fontWeight: FontWeight.w700,
                   ),
                 ),
-                Text('12 Tasks',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18.0,
-                  ),
-                ),
+
 
               ],
             ),
@@ -60,49 +50,52 @@ class Home extends StatelessWidget {
                   topRight: Radius.circular(20.0),
                 ),
               ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  FlatButton(
-                    color: Colors.black,
-                    onPressed: (){
-                      Navigator.push(context, new MaterialPageRoute(
-                          builder: (context)=>TasksScreen()
-                      ));
-                    },
-                    child: Text("plans.Ktu",
-                      style: TextStyle(
-                          color: Colors.white
-                      ),),
-                  ),
-                  Divider(height: 10.0,),
-                  FlatButton(
-                    color: Colors.black,
-                    onPressed: (){
-                      Navigator.push(context, new MaterialPageRoute(
-                          builder: (context)=>JsonParseDemo()
-                      ));
-                    },
-                    child: Text("notifications.Ktu",
-                      style: TextStyle(
-                          color: Colors.white
-                      ),),
-                  ),
-                  Divider(height: 10.0,),
-                  FlatButton(
-                    color: Colors.black,
-                    onPressed: (){
-                      Navigator.push(context, new MaterialPageRoute(
-                          builder: (context)=>ChatScreen()
-                      ));
-                    },
-                    child: Text("ChitChat.Ktu",
-                      style: TextStyle(
-                          color: Colors.white
-                      ),),
-                  ),
+              child: Container(
+                padding: EdgeInsets.only(right: 200.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    FlatButton(
+                      color: Colors.black,
+                      onPressed: (){
+                        Navigator.push(context, new MaterialPageRoute(
+                            builder: (context)=>TasksScreen()
+                        ));
+                      },
+                      child: Text("plans.Ktu",
+                        style: TextStyle(
+                            color: Colors.white
+                        ),),
+                    ),
+                    Divider(height: 10.0,),
+                    FlatButton(
+                      color: Colors.black,
+                      onPressed: (){
+                        Navigator.push(context, new MaterialPageRoute(
+                            builder: (context)=>JsonParseDemo()
+                        ));
+                      },
+                      child: Text("notifications.Ktu",
+                        style: TextStyle(
+                            color: Colors.white
+                        ),),
+                    ),
+                    Divider(height: 10.0,),
+                    FlatButton(
+                      color: Colors.black,
+                      onPressed: (){
+                        Navigator.push(context, new MaterialPageRoute(
+                            builder: (context)=>ChatScreen()
+                        ));
+                      },
+                      child: Text("ChitChat.Ktu",
+                        style: TextStyle(
+                            color: Colors.white
+                        ),),
+                    ),
 
-                ],
+                  ],
+                ),
               ),
             ),
           ),

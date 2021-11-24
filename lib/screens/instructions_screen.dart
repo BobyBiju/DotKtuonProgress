@@ -33,6 +33,7 @@ class InstructionsScreen extends StatelessWidget {
                   InstructionTile(
                     title:
                         'Hold on a task to view information regarding it or edit it.',
+
                   ),
                   InstructionTile(
                     title: 'Click on the + button to add a new task',
@@ -67,7 +68,7 @@ class InstructionTile extends StatelessWidget {
         5.0,
       ),
       decoration: BoxDecoration(
-        color: Colors.lightBlueAccent,
+        color: Colors.black,
         borderRadius: BorderRadius.all(Radius.circular(20.0)),
       ),
       child: ListTile(
@@ -75,7 +76,10 @@ class InstructionTile extends StatelessWidget {
           FontAwesomeIcons.greaterThan,
           size: 25.0,
         ),
-        title: Text(title),
+        title: Text(title,
+        style: TextStyle(
+          color: Colors.white,
+        ),),
       ),
     );
   }

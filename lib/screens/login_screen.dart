@@ -20,7 +20,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.black,
       body: ModalProgressHUD(inAsyncCall: showSpinner,
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 24.0),
@@ -40,6 +40,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 48.0,
               ),
               TextField(textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+
                 onChanged: (value) {
                  email=value;
                 },
@@ -51,6 +55,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 8.0,
               ),
               TextField(textAlign: TextAlign.center,obscureText: true,
+                style: TextStyle(
+                  color: Colors.white,
+                ),
                 onChanged: (value) {
                  password=value;
                 },
@@ -66,6 +73,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   borderRadius: BorderRadius.all(Radius.circular(30.0)),
                   elevation: 5.0,
                   child: MaterialButton(
+
                     onPressed: () async{
                       setState(() {
                         showSpinner=true;
@@ -86,8 +94,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     height: 42.0,
                     child: Text(
                       'Log In',
+
                     ),
-                  ),
+                  )
+                  ,
                 ),
               ),
             ],

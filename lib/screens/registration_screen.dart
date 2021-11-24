@@ -22,7 +22,7 @@ String password;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.black,
       body: ModalProgressHUD(inAsyncCall: showSpinner,
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 24.0),
@@ -42,6 +42,9 @@ String password;
                 height: 48.0,
               ),
               TextField(textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                ),
                 onChanged: (value) {
                   email=value;
                 },
@@ -53,6 +56,9 @@ String password;
                 height: 8.0,
               ),
               TextField(textAlign: TextAlign.center,obscureText: true,
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
                 onChanged: (value) {
                 password=value;
                 },

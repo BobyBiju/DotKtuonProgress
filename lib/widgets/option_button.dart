@@ -10,7 +10,7 @@ class OptionButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return FlatButton(
       onPressed: onPressed,
-      color: Colors.lightBlueAccent,
+      color: Colors.black,
       padding: EdgeInsets.symmetric(vertical: 20.0),
       child: Text(
         title,

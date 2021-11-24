@@ -39,7 +39,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: animation.value,
+      backgroundColor: Colors.black,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
@@ -55,10 +55,11 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                     height: 60,
                   ),
                 ),
-                TypewriterAnimatedTextKit(
-                  text: ['Weber ChatRooms'],
+                TyperAnimatedTextKit(
+                  text: ['.Ktu'],
                   textStyle: TextStyle(
-                    fontSize: 30.0,
+                    color: Colors.white,
+                    fontSize: 50.0,
                     fontFamily: 'Bobbers',
                     fontWeight: FontWeight.w900,
                   ),
@@ -68,8 +69,8 @@ class _WelcomeScreenState extends State<WelcomeScreen>
             SizedBox(
               height: 48.0,
             ),
-            RoundedButton(color: Colors.lightBlueAccent,text: Text('Log in'),onpressed: (){Navigator.pushNamed(context, LoginScreen.id);},),
-            RoundedButton(color: Colors.blueAccent,text: Text('Register'),onpressed: (){Navigator.pushNamed(context, RegistrationScreen.id);},),
+            RoundedButton(color: Colors.white,text: Text('Log in'),onpressed: (){Navigator.pushNamed(context, LoginScreen.id);},),
+            RoundedButton(color: Colors.white,text: Text('Register'),onpressed: (){Navigator.pushNamed(context, RegistrationScreen.id);},),
 
           ],
         ),

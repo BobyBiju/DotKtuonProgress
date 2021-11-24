@@ -43,7 +43,7 @@ class TasksScreen extends StatelessWidget {
           ),
         ),
       ),
-      backgroundColor: Colors.lightBlueAccent,
+      backgroundColor: Colors.black,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showModalBottomSheet(
@@ -58,7 +58,7 @@ class TasksScreen extends StatelessWidget {
             ),
           );
         },
-        backgroundColor: Colors.lightBlueAccent,
+        backgroundColor: Colors.black,
         child: Icon(Icons.add),
       ),
       body: FutureBuilder(
@@ -89,7 +89,7 @@ class TasksScreen extends StatelessWidget {
                           child: Icon(
                             Icons.list,
                             size: 30.0,
-                            color: Colors.lightBlueAccent,
+                            color: Colors.black,
                           ),
                           radius: 30.0,
                         ),
@@ -98,7 +98,7 @@ class TasksScreen extends StatelessWidget {
                         height: 10.0,
                       ),
                       Text(
-                        'ToDoey',
+                        'Plans',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 50.0,

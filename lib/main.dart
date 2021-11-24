@@ -22,6 +22,7 @@ FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
 Future<void> main() async {
 
 
+
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
 
@@ -42,6 +43,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: Provider.of<TaskData>(context).currTheme,
       title: 'ToDoey',
       initialRoute: WelcomeScreen.id,

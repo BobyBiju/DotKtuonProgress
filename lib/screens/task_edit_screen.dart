@@ -47,7 +47,7 @@ class _TaskEditScreenState extends State<TaskEditScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.lightBlueAccent,
+        color: Colors.black,
         child: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -141,7 +141,9 @@ class _TaskEditScreenState extends State<TaskEditScreen> {
                                   ),
                                   DropdownButton<bool>(
                                     value: dropDownVal,
-                                    style: kTaskInfoTextStyle,
+                                    style: TextStyle(
+                                      color: Colors.black
+                                    ),
                                     items: [true, false]
                                         .map((e) => DropdownMenuItem(
                                             value: e,
@@ -169,7 +171,7 @@ class _TaskEditScreenState extends State<TaskEditScreen> {
                                   ),
                                   Expanded(
                                     child: FlatButton(
-                                      color: Colors.lightBlueAccent,
+                                      color: Colors.black,
                                       onPressed: () async {
                                         newTaskReminderDate =
                                             await showDatePicker(

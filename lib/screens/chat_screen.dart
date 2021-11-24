@@ -61,8 +61,8 @@ class _ChatScreenState extends State<ChatScreen> {
                 Navigator.pop(context);
               }),
         ],
-        title: Text('⚡️Room X'),
-        backgroundColor: Colors.lightBlueAccent,
+        title: Text('⚡️ChitChat.Ktu'),
+        backgroundColor: Colors.black,
       ),
       body: SafeArea(
         child: Column(
@@ -94,7 +94,9 @@ class _ChatScreenState extends State<ChatScreen> {
                     },
                     child: Text(
                       'Send',
-                      style: kSendButtonTextStyle,
+                      style: TextStyle(
+                        color: Colors.black
+                      ),
                     ),
                   ),
                 ],
@@ -175,7 +177,7 @@ class MessageBubble extends StatelessWidget {
                   topRight: Radius.circular(30),
                   bottomLeft: Radius.circular(30),
                   bottomRight: Radius.circular(30)),
-              color: isme ? Colors.lightBlueAccent : Colors.white,
+              color: isme ? Colors.black : Colors.white,
               child: Padding(
                 padding:
                 const EdgeInsets.symmetric(vertical: 10, horizontal: 20),

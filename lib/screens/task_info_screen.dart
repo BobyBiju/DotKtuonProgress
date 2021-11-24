@@ -18,7 +18,7 @@ class TaskInfoScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.lightBlueAccent,
+        color: Colors.black,
         child: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -81,6 +81,7 @@ class TaskInfoScreen extends StatelessWidget {
                         Text(
                           'Task is done: ${task.isChecked}',
                           style: kTaskInfoTextStyle,
+
                         ),
                         SizedBox(
                           height: 10.0,
@@ -95,6 +96,7 @@ class TaskInfoScreen extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.stretch,
                             children: <Widget>[
                               OptionButton(
+
                                 title:
                                     'Mark ${task.isChecked ? 'Inc' : 'C'}omplete',
                                 onPressed: () {
