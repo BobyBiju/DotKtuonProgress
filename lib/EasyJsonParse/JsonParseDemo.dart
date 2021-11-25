@@ -16,6 +16,29 @@ class JsonParseDemo extends StatefulWidget {
 class _JsonParseDemoState extends State<JsonParseDemo> {
   Future<Notifications> _notifications;
 
+
+  Future <void> launched;
+  String launchUrl;
+
+  Future<void> _launchInBrowser(String url) async {
+    // if (await canLaunch(url)) {
+    //   await launch(
+    //     url,
+    //     forceSafariVC: false,
+    //     forceWebView: false,
+    //     headers: <String, String>{'header_key': 'header_value'},
+    //   );
+    // } else {
+    //   throw 'Could not launch $url';
+    // }
+    launch(
+      url,
+      forceSafariVC: false,
+      forceWebView: false,
+      headers: <String, String>{'header_key': 'header_value'},
+    );
+  }
+
   @override
   void initState() {
     _notifications=Services().getNotifications();
@@ -76,6 +99,16 @@ class _JsonParseDemoState extends State<JsonParseDemo> {
                       //     ]
                       //   ),
                       // ),
+                      trailing: RaisedButton(
+                        child: Text('Click Me',
+                        style: TextStyle(
+                          color: Colors.blue,
+                        ),),
+                        onPressed: () {
+                          print('${notification.links.last}');
+                          _launchInBrowser('Uri.parse(${notification.links.last})');
+                        },
+                      ),
 
                     );
                   }

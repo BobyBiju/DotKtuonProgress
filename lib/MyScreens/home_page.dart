@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:todoey/EasyJsonParse/JsonParseDemo.dart';
+import 'package:todoey/notes/notes_ktu.dart';
 import 'package:todoey/screens/chat_screen.dart';
 import 'package:todoey/screens/tasks_screen.dart';
 
@@ -89,6 +90,18 @@ class Home extends StatelessWidget {
                         ));
                       },
                       child: Text("ChitChat.Ktu",
+                        style: TextStyle(
+                            color: Colors.white
+                        ),),
+                    ),
+                    FlatButton(
+                      color: Colors.black,
+                      onPressed: (){
+                        Navigator.push(context, new MaterialPageRoute(
+                            builder: (context)=> LaunchUrlDemo()
+                        ));
+                      },
+                      child: Text("Notes.Ktu",
                         style: TextStyle(
                             color: Colors.white
                         ),),
