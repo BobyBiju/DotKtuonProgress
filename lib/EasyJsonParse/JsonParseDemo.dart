@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:dio/dio.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -5,6 +8,12 @@ import 'package:url_launcher/url_launcher.dart';
 
 import 'Notifications.dart';
 import 'Services.dart';
+import 'package:open_file/open_file.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:flutter_downloader/flutter_downloader.dart';
+
+
+
 
 
 class JsonParseDemo extends StatefulWidget {
@@ -102,9 +111,10 @@ class _JsonParseDemoState extends State<JsonParseDemo> {
                       trailing: RaisedButton(
 
                         child: Text('Click Me'),
-                        onPressed: () {
-                          _launchInBrowser("${notification.links[1]}");
-                        },
+                        onPressed: () => openFile(
+                          urlll: "${notification.links[0].url}"
+                        ,fileName: 'download',
+                        )
                       ),
 
                     );
@@ -119,4 +129,31 @@ class _JsonParseDemoState extends State<JsonParseDemo> {
       ),
     );
   }
+  Future openFile({String urlll, String fileName}) async {
+    final file =await downloadFile(urlll, fileName);
+    if(file==null) return;
+    print('Path: ${file.path}');
+    OpenFile.open(file.path);
+  }
+
+  Future<File> downloadFile(String urlll, String name) async {
+    final appStorage =await getApplicationDocumentsDirectory();
+    final file = File('${appStorage.path}/$name');
+    try {
+      final response = await Dio().get(urlll,
+        options: Options(
+          responseType: ResponseType.bytes,
+          followRedirects: false,
+          receiveTimeout: 0,
+        ),
+      );
+      final raf = file.openSync(mode: FileMode.write);
+      raf.writeFromSync(response.data);
+      await raf.close();
+      return file;
+    }catch(e){
+      return null;
+    }
+  }
+
 }
