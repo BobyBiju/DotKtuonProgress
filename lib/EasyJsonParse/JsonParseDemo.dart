@@ -17,8 +17,7 @@ class _JsonParseDemoState extends State<JsonParseDemo> {
   Future<Notifications> _notifications;
 
 
-  Future <void> launched;
-  String launchUrl;
+
 
   Future<void> _launchInBrowser(String url) async {
     // if (await canLaunch(url)) {
@@ -38,6 +37,7 @@ class _JsonParseDemoState extends State<JsonParseDemo> {
       headers: <String, String>{'header_key': 'header_value'},
     );
   }
+
 
   @override
   void initState() {
@@ -100,13 +100,10 @@ class _JsonParseDemoState extends State<JsonParseDemo> {
                       //   ),
                       // ),
                       trailing: RaisedButton(
-                        child: Text('Click Me',
-                        style: TextStyle(
-                          color: Colors.blue,
-                        ),),
+
+                        child: Text('Click Me'),
                         onPressed: () {
-                          print('${notification.links.last}');
-                          _launchInBrowser('Uri.parse(${notification.links.last})');
+                          _launchInBrowser("${notification.links[1]}");
                         },
                       ),
 

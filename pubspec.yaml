@@ -24,6 +24,10 @@ dependencies:
   animated_text_kit: ^4.2.1
   firebase_analytics: ^7.0.1
   url_launcher: ^6.0.5
+
+#  flutter_downloader: ^1.4.4
+#  path_provider: ^1.6.10
+#  permission_handler: ^5.0.1
 #  firebase_core: ^0.3.4
 #  firebase_auth: ^0.9.0
 #  cloud_firestore: ^0.10.1
