@@ -63,71 +63,105 @@ class _JsonParseDemoState extends State<JsonParseDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        title: Text("notifications.Ktu",
-          style: TextStyle(
-              fontWeight: FontWeight.w400
-          ),),
-      ),
-      body: Container(
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.only(topLeft: Radius.circular(10.0), topRight: Radius.circular(10.0))
-        ),
-        child: FutureBuilder<Notifications>(
-          future: _notifications,
-          builder: (context,snapshot){
-            if(snapshot.hasData) {
-              return ListView.builder(
-                  itemCount: snapshot.data.notifications.length,
-                  itemBuilder: (context, index) {
-                    var notification= snapshot.data.notifications[index];
-                    return ListTile(
-                      title: Text(notification.title),
-                      subtitle: Text(notification.description),
-                      // trailing: RichText(
-                      //   text: TextSpan(
-                      //     children: [
-                      //       TextSpan(
-                      //         style: defaultText,
-                      //         text: "Click"
-                      //       ),
-                      //       TextSpan(
-                      //         style: linkText,
-                      //         text: "here",
-                      //         recognizer: TapGestureRecognizer()..onTap=() async{
-                      //           var urll =notification.links.last;
-                      //           if(await canLaunch("$urll")){
-                      //             await launch("$urll");
-                      //             print(urll);
-                      //           }else{
-                      //             throw "Cannot load";
-                      //           }
-                      //         }
-                      //       ),
-                      //     ]
-                      //   ),
-                      // ),
-                      trailing: RaisedButton(
-
-                        child: Text('Click Me'),
-                        onPressed: () => openFile(
-                          urlll: "${notification.links[0].url}"
-                        ,fileName: 'download',
-                        )
-                      ),
-
-                    );
-                  }
-                  );
-            }else{return Center(child: CircularProgressIndicator());}
-          },
-
-        ),
+      backgroundColor: Colors.black,
 
 
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            padding: EdgeInsets.only(top:60.0,left: 30.0,right: 30.0,bottom: 30.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+
+                SizedBox(height: 10.0,),
+                Text("Notifications.Ktu",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 35.0,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+
+
+              ],
+            ),
+          ),
+          Expanded(
+            child: Container(
+              padding: EdgeInsets.only(top:60.0,left: 30.0,right: 30.0,bottom: 30.0),
+              height: 300.0,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(20.0),
+                  topRight: Radius.circular(20.0),
+                ),
+              ),
+              child: Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(topLeft: Radius.circular(10.0), topRight: Radius.circular(10.0))
+                ),
+                child: FutureBuilder<Notifications>(
+                  future: _notifications,
+                  builder: (context,snapshot){
+                    if(snapshot.hasData) {
+                      return ListView.builder(
+                          itemCount: snapshot.data.notifications.length,
+                          itemBuilder: (context, index) {
+                            var notification= snapshot.data.notifications[index];
+                            return ListTile(
+                              title: Text(notification.title),
+                              subtitle: Text(notification.description),
+                              // trailing: RichText(
+                              //   text: TextSpan(
+                              //     children: [
+                              //       TextSpan(
+                              //         style: defaultText,
+                              //         text: "Click"
+                              //       ),
+                              //       TextSpan(
+                              //         style: linkText,
+                              //         text: "here",
+                              //         recognizer: TapGestureRecognizer()..onTap=() async{
+                              //           var urll =notification.links.last;
+                              //           if(await canLaunch("$urll")){
+                              //             await launch("$urll");
+                              //             print(urll);
+                              //           }else{
+                              //             throw "Cannot load";
+                              //           }
+                              //         }
+                              //       ),
+                              //     ]
+                              //   ),
+                              // ),
+                              trailing: RaisedButton(
+
+                                  child: Text('Click Me'),
+                                  onPressed: () => openFile(
+                                    urlll: "${notification.links[0].url}"
+                                    ,fileName: 'download',
+                                  )
+                              ),
+
+                            );
+                          }
+                      );
+                    }else{return Center(child: CircularProgressIndicator());}
+                  },
+
+                ),
+
+
+              ),
+            ),
+          ),
+        ],
       ),
     );
+
   }
   Future openFile({String urlll, String fileName}) async {
     final file =await downloadFile(urlll, fileName);

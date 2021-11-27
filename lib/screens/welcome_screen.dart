@@ -56,7 +56,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                   ),
                 ),
                 TyperAnimatedTextKit(
-                  text: ['.Ktu'],
+                  text: ['KtuPlanner'],
                   textStyle: TextStyle(
                     color: Colors.white,
                     fontSize: 50.0,
