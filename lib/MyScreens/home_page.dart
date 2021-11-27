@@ -4,6 +4,8 @@ import 'package:todoey/EasyJsonParse/JsonParseDemo.dart';
 import 'package:todoey/notes/notes_ktu.dart';
 import 'package:todoey/screens/chat_screen.dart';
 import 'package:todoey/screens/tasks_screen.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:todoey/screens/instructions_screen.dart';
 
 
 
@@ -28,13 +30,22 @@ class Home extends StatelessWidget {
               children: [
 
                 SizedBox(height: 10.0,),
-                Text(".Ktu",
+                Text("KtuPlanner",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 50.0,
                     fontWeight: FontWeight.w700,
                   ),
                 ),
+                SizedBox(height: 20.0,),
+                ListTile(
+                    leading: Icon(FontAwesomeIcons.tasks),
+                    title: Text('How to use'),
+                    onTap: () {
+                      Navigator.pushNamed(context, InstructionsScreen.id);
+                    }),
+
+
 
 
               ],

@@ -3,6 +3,7 @@ import 'package:todoey/screens/registration_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:todoey/components/rounded_button.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 
 class WelcomeScreen extends StatefulWidget {
   static String id = 'welcome_screen';
@@ -46,6 +47,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
+
             Row(
               children: <Widget>[
                 Hero(
