@@ -112,8 +112,8 @@ class _JsonParseDemoState extends State<JsonParseDemo> {
                           itemBuilder: (context, index) {
                             var notification= snapshot.data.notifications[index];
                             return ListTile(
-                              title: Text(notification.title),
-                              subtitle: Text(notification.description),
+                              title: Text(notification.title??'titele'),
+                              subtitle: Text(notification.description??'description'),
                               // trailing: RichText(
                               //   text: TextSpan(
                               //     children: [
@@ -141,7 +141,7 @@ class _JsonParseDemoState extends State<JsonParseDemo> {
 
                                   child: Text('Click Me'),
                                   onPressed: () => openFile(
-                                    urlll: "${notification.links[0].url}"
+                                    urlll: "${notification.links[0].url}"??'url'
                                     ,fileName: 'download',
                                   )
                               ),
