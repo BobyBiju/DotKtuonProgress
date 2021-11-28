@@ -1,61 +1,21 @@
-# todoey
+KtuPlanner is an all in one productivity app for KTU students.
 
-A todo-list application, made using flutter
+*Notifications.ktu will give live updates as soon as KTU releases them
 
-## ChangeLog:
+* On pressing Click Me we can download the circular to phone storage
 
-### v 1.7.4
-- Fixed minor bugs:
-    - Blank task was crashing app.
+*Use OneDRive to open downloaded file
 
-### v 1.7.3
-- Added dark mode switch.
+*On seeing relevant notifications we can set plans on plans.ktu and start working to accomplish it
 
-### v 1.7.2
-- Added dark mode feature, will use the default device theme.
+*In time of need we can communicate and help other fellow ktu students by using ChitChat.ktu
+                  
+                  
+*We can study using the notes provided by the app using Notes.ktu
 
-### v 1.7.1
-- Fixed Bugs:
-    - Task count did not update
+'* USING THIS CODE WITHOUT THE CREATOR'S PERMISSION IS ILLEGAL AND WILL BE SERIOUSLY DEALT WITH.  '
 
-### v 1.7.0
-- Added app drawer by clicking on main icon.
-- Starting instructions will not show after initial start and deleting.
-- Instructions can be accessed in the left pane.
-
-### v 1.6.0
-- Implemented swipe to delete functionality.
-- Holding and double tap both open task info screen.
-
-### v 1.5.1
-- Added option to remove reminder in edit task.
-- Fixed bugs:
-    - Task wasn't added without reminder.
-    - Task wasn't saved if there were no changes.
-
-### v 1.5.0
-- Added option to edit task from the view task screen.
-- Added option to check task from the view task screen.
-- Optimised Performance
-
-### v 1.4.0
-- Added option to view task - Double tap on the task to view details about the task.
-- Fixed bug: Reminder added only when task is added.
-
-### v1.3.3
-- Minor bug fixes
-
-### v 1.3.2
-- Added the possibility for multiple reminders scheduling.
-
-### v 1.3.0
-- Added reminder feature. Now you can ask for a notification for a specific to do item.
-
-### v 1.2.0
-- Added a local storage functionality. Keeps store of the data, and initialises the to do list from the stored data.
-
-### v 1.0.0
-- Initial creation. Shows the to do list, can edit the list, add and delete items.
-
-### Screenshot:
-![Screenshot](screenshot.jpg)
+Creator: Boby Biju
+         EEE , S2
+         Cet 
+Contact: bobybijukurian@gmail.com
