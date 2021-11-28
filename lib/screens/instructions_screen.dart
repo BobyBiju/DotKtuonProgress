@@ -32,18 +32,20 @@ class InstructionsScreen extends StatelessWidget {
                 children: <Widget>[
                   InstructionTile(
                     title:
-                        'Hold on a task to view information regarding it or edit it.',
+                    '*Notifications.ktu will give live updates as soon as KTU releases them'
+                        '* On pressing Click Me we can download the circular to phone storage'
+                        '*Use OneDRive to open downloaded file',
 
                   ),
                   InstructionTile(
-                    title: 'Click on the + button to add a new task',
+                    title: 'On seeing relevant notifications we can set plans on plans.ktu and start working to accomplish it',
                   ),
                   InstructionTile(
                     title:
-                        'Click on the checkbox on the right to mark the task as done',
+                    'In time of need we can communicate and help other fellow ktu students by using ChitChat.ktu',
                   ),
                   InstructionTile(
-                    title: 'Swipe a task in any direction to delete the task.',
+                    title: 'We can study using the notes provided by the app using Notes.ktu',
                   ),
                 ],
               ),
@@ -77,9 +79,9 @@ class InstructionTile extends StatelessWidget {
           size: 25.0,
         ),
         title: Text(title,
-        style: TextStyle(
-          color: Colors.white,
-        ),),
+          style: TextStyle(
+            color: Colors.white,
+          ),),
       ),
     );
   }

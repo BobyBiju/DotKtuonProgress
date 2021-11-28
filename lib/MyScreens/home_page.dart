@@ -39,8 +39,12 @@ class Home extends StatelessWidget {
                 ),
                 SizedBox(height: 20.0,),
                 ListTile(
-                    leading: Icon(FontAwesomeIcons.tasks),
-                    title: Text('How to use'),
+                    leading: Icon(FontAwesomeIcons.tasks,
+                    color: Colors.white,),
+                    title: Text('How to use',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),),
                     onTap: () {
                       Navigator.pushNamed(context, InstructionsScreen.id);
                     }),
@@ -105,6 +109,7 @@ class Home extends StatelessWidget {
                             color: Colors.white
                         ),),
                     ),
+                    Divider(height: 10.0,),
                     FlatButton(
                       color: Colors.black,
                       onPressed: (){
